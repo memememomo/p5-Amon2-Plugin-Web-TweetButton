@@ -1,38 +1,3 @@
-package Amon2::Plugin::Web::TweetButton;
-use strict;
-use warnings;
-use Amon2::Util;
-our $VERSION = '0.01';
-
-
-sub init {
-    my ($class, $c, $conf) = @_;
-
-    Amon2::Util::add_method($c, 'tweet_button' => sub {
-	my ($c, $stuff) = @_;
-
-	$stuff->{url}     ||= $conf->{url};
-	$stuff->{count}   ||= $conf->{count} || 'vertical';
-	$stuff->{via}     ||= $conf->{via};
-	$stuff->{related} ||= $conf->{related};
-	$stuff->{lang}    ||= $conf->{lang};
-
-	my $attrs = '';
-	for my $name (qw/url text count via related lang/) {
-	    $attrs .= qq/ data-$name="$stuff->{$name}"/ if $stuff->{$name};
-	}
-
-	my $tag = <<"EOF";
-<a href="http://twitter.com/share" class="twitter-share-button"$attrs>Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-EOF
-        $tag;
-    });
-}
-
-
-1;
-__END__
-
 =head1 NAME
 
 Amon2::Plugin::Web::TweetButton - TweetButton Helper Plugin
@@ -51,6 +16,11 @@ Amon2::Plugin::Web::TweetButton - TweetButton Helper Plugin
 THIS IS ALPHA QUALITY CODE!
 
 If you found bug, please report by e-mail or twitter(@memememomo).
+
+=head1 INSTALL
+
+  $ git clone git@github.com:memememomo/Amon2-Plugin-Web-TweetButton.git
+  $ cpanm ./Amon2-Plugin-Web-TweetButton
 
 =head1 DESCRIPTION
 
