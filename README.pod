@@ -11,7 +11,7 @@ Amon2::Plugin::Web::TweetButton - TweetButton Helper Plugin
     lang => 'ja',
   });
 
-=haed1 NOTE
+=head1 NOTE
 
 THIS IS ALPHA QUALITY CODE!
 
@@ -75,11 +75,11 @@ Related twitter accounts (no default).
 
 The language of the tweet (no default).
 
+=back
+
 =head1 AUTHOR
 
 memememomo E<lt>memememmomo@gmail.comE<gt>
-
-=head1 SEE ALSO
 
 =head1 LICENSE
 
