@@ -105,11 +105,12 @@ Related twitter accounts (no default).
 
 The language of the tweet (no default).
 
+=back
+
 =head1 AUTHOR
 
 memememomo E<lt>memememmomo@gmail.comE<gt>
 
-=head1 SEE ALSO
 
 =head1 LICENSE
 
